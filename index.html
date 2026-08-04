@@ -255,7 +255,12 @@
       },
       {
         title: 'Children\u2019s privacy',
-        body: 'Foondly is not intended for use by anyone under 18 years of age. We do not knowingly collect information from children.',
+        body: 'Foondly is strictly designed for adult relationships and is not intended for use by anyone under 18 years of age. We do not knowingly permit minors to use the service or collect information from children.',
+      },
+      {
+        id: 'child-safety',
+        title: 'Child Safety Standards & CSAE/CSAM Prevention Policy',
+        body: 'Foondly maintains a strict, zero-tolerance policy against Child Sexual Abuse and Exploitation (CSAE) and Child Sexual Abuse Material (CSAM). Our platform leverages automated AI moderation filters and proactive monitoring to prevent, block, and report any abusive content or inappropriate interactions involving minors. Any user violating these safety standards will face immediate account termination and will be reported directly to relevant law enforcement agencies and the National Center for Missing & Exploited Children (NCMEC). For child safety inquiries or reporting compliance, contact our designated Safety Officer at kdcreativestudios@gmail.com or safety@foondly.app.',
       },
       {
         title: 'Changes to this policy',
@@ -267,6 +272,7 @@
     sections.forEach((s, i) => {
       const section = document.createElement('div');
       section.className = 'section';
+      if (s.id) section.id = s.id;
       section.innerHTML = `
         <h2 class="section-title">${s.title}</h2>
         <p class="section-body">${s.body}</p>
